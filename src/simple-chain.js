@@ -1,8 +1,8 @@
 const CustomError = require("../extensions/custom-error");
-
+chain: '';
 const chainMaker = {
    getLength() {
-      return this.Length;
+      return this.chain.Length;
    },
    addLink(value) {
       throw new CustomError('Not implemented');
@@ -13,14 +13,18 @@ const chainMaker = {
       // remove line with error and write your code here
    },
    reverseChain() {
-      return this.reverse();
+      return this.chain.reverse();
    },
    finishChain() {
-      return this.join('~~');
+      return this.chain;
    }
 };
 
 module.exports = chainMaker;
+
+
+
+
 
 
 
